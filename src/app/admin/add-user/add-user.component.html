@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit(formgroup)" [formGroup]="formgroup">
+    <section class="form-block">
+        <label>Register student/lectuer</label>
+        <div class="form-group">
+            <label for="aForm_1">email</label>
+            <input type="text" id="aForm_1" formControlName="email" placeholder="Enter value here" size="45">
+        </div>
+        <div class="form-group">
+            <label for="aForm_2">password</label>
+            <input type="password" id="aForm_2" formControlName="password" placeholder="Enter another value here" size="35">
+        </div>
+        <div class="form-group">
+            <label for="aForm_3">Role</label>
+            <div class="select">
+                <select formControlName="role" id="aForm_3">
+                    <option>Student</option>
+                    <option>lectuer</option>
+                    
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="formgroup.invalid">Add User</button>
+    </section>
+</form>
